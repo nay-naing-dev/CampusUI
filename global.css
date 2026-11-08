@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Default theme (the Figma header frame's black-plum), as RGB channels.
+   ThemeProvider overrides these per university. Keep in sync with DEFAULT_THEME
+   in src/theme/universities.ts. */
+:root {
+  --brand: 30 4 19;        /* #1E0413 */
+  --brand-deep: 18 1 10;   /* #12010A */
+  --accent: 209 42 124;    /* #D12A7C */
+  --highlight: 255 201 74; /* #FFC94A */
+  --third: 103 14 60;      /* #670E3C */
+  --soft: 251 227 238;     /* #FBE3EE */
+  --tint: 247 241 250;     /* #F7F1FA */
+}
