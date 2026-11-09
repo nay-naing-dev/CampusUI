@@ -13,15 +13,32 @@ Reanimated.
 
 ## Run it
 
+You need **Node.js 22.13+ or 24.3+** (Node 24 LTS recommended; see
+`.nvmrc`). Older Node versions such as 20 cannot run Expo SDK 58, and
+`npm ci` will refuse to install on them.
+
 ```bash
-npm install
+npm ci
 npx expo start
 ```
 
 Then press `a` (Android), `i` (iOS) or `w` (web), or scan the QR code with
-Expo Go.
+Expo Go (update Expo Go first; it must support SDK 58).
 
 All data lives in memory and resets when the app reloads.
+
+### Troubleshooting: "500" / "problem loading the project"
+
+There is no backend yet, so a 500 is never a server API error. It means
+the Metro dev server failed to build the app on your machine. Read the red
+error in the terminal running `npx expo start`, then try in order:
+
+1. `node -v`: upgrade to Node 22.13+ or 24 LTS if it is older.
+2. Delete `node_modules`, then run `npm ci` and `npx expo install --fix`.
+3. `npx expo start -c` to clear Metro's cache.
+4. Update the Expo Go app on your phone.
+5. Phone on a different network or behind a firewall:
+   `npx expo start --tunnel`.
 
 ### Demo accounts
 

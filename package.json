@@ -2,6 +2,9 @@
   "name": "campusloop",
   "version": "1.0.0",
   "main": "expo-router/entry",
+  "engines": {
+    "node": "^22.13.0 || ^24.3.0 || >=26.0.0"
+  },
   "dependencies": {
     "@expo-google-fonts/bricolage-grotesque": "^0.4.1",
     "@expo-google-fonts/chango": "^0.4.1",
